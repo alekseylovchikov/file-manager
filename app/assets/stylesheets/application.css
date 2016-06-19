@@ -13,3 +13,79 @@
  *= require_tree .
  *= require_self
  */
+ 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", "Ubuntu", "Arial", sans-serif;
+    font-size: 20px;
+    color: #383838;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.hero-heading {
+    text-align: center;
+    font-size: 200%;
+    font-weight: 100;
+}
+
+.hero-heading:after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 4px;
+    margin: 20px 30% 0 30%;
+    background-color: red;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #ccc;
+}
+
+.left-nav, .right-nav {
+    list-style: none;
+}
+
+.left-nav li, .right-nav li {
+    float: left;
+    line-height: 60px;
+}
+
+.left-nav li a, .right-nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-nav li:last-child {
+    margin-left: 12px;
+}
+
+.left-nav {
+    float: left;
+}
+
+.right-nav {
+    float: right;
+}
+
+@media only screen and (max-width: 1025px) {
+    .container {
+        margin: 0 2%;
+    }
+}

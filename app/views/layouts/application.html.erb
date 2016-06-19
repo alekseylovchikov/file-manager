@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <nav class="navbar">
+    <div class="container">
+      <ul class="left-nav">
+        <li><a href="#">Logo</a></li>
+      </ul>
+      
+      <ul class="right-nav">
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<header>
-  <h1>FileManager</h1>
-</header>
-
-<%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
