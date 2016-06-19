@@ -45,7 +45,7 @@ h1 {
     width: 40%;
     height: 4px;
     margin: 20px 30% 0 30%;
-    background-color: red;
+    background-color: #6cded2;
 }
 
 .container {
@@ -53,9 +53,23 @@ h1 {
     margin: 0 auto;
 }
 
+/* HEADER */
+
+.header {
+    height: 200px;
+    background-image: url(https://static.pexels.com/photos/34069/pexels-photo-large.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+
 .navbar {
     height: 60px;
-    background-color: #ccc;
+    background-color: #4c3a52;
+    box-shadow: 0 0 10px #383838;
 }
 
 .left-nav, .right-nav {
@@ -70,6 +84,12 @@ h1 {
 .left-nav li a, .right-nav li a {
     text-decoration: none;
     color: #fff;
+    transition: color .5s;
+    font-weight: 100;
+}
+
+.left-nav li a, .right-nav li a:hover {
+    color: #6cded2;
 }
 
 .right-nav li:last-child {
@@ -83,6 +103,14 @@ h1 {
 .right-nav {
     float: right;
 }
+
+/*remove*/
+
+.space {
+    height: 2000px;
+}
+
+/* RESPONSIVE */
 
 @media only screen and (max-width: 1025px) {
     .container {
