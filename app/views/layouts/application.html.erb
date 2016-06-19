@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workspace</title>
+  <title>File Manager</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,11 +12,11 @@
   <nav class="navbar">
     <div class="container">
       <ul class="left-nav">
-        <li><a href="#">Logo</a></li>
+        <li><a href="/"><%= image_tag("logo.png") %></a></li>
       </ul>
       
       <ul class="right-nav">
-        <li><a href="#">Sign Up</a></li>
+        <li><%= link_to 'Sign Up', root_path %></li>
         <li><a href="#">Sign In</a></li>
       </ul>
     </div>

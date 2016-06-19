@@ -1,0 +1,15 @@
+.container
+    h1.hero-heading All files
+
+    table
+        thead
+            tr
+                th Title
+                th Content
+                th Actions
+        tbody
+            - @docs.each do |doc|
+                tr
+                    td = link_to doc.title, doc_path(doc)
+                    td = doc.content
+                    td = link_to 'Edit', edit_doc_path(doc)

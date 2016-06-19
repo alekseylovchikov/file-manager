@@ -53,6 +53,14 @@ h1 {
     margin: 0 auto;
 }
 
+a {
+    color: #4c3a52;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 /* HEADER */
 
 .header {
@@ -75,6 +83,70 @@ h1 {
 .header--hero-text .hero-heading {
     color: #fff;
     font-size: 300%;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* FORM */
+
+input:not([type="submit"]), textarea {
+    font-family: "Open Sans", "Ubuntu", "Arial", sans-serif;
+    font-size: 80%;
+    
+    width: 100%;
+    padding: 8px 0 8px 0;
+    outline: none;
+    border: 0;
+    
+    margin-bottom: 16px;
+}
+
+input:not([type="submit"]) {
+    background: transparent;
+    border-bottom: 2px solid #e4e4e4;
+    transition: border-bottom .5s;
+}
+
+input:not([type="submit"]):focus {
+    border-bottom: 2px solid #6cded2;
+}
+
+textarea {
+    max-width: 100%;
+    border-bottom: 2px solid #e4e4e4;
+    transition: border-bottom .5s;
+}
+
+textarea:focus {
+    border-bottom: 2px solid #6cded2;
+}
+
+/* BUTTONS */
+
+input[type="submit"] {
+    padding: 8px;
+    text-transform: uppercase;
+    border: none;
+    transition: background-color .5s, color .5s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    color: #fff;
+    background-color: #6cded2;
 }
 
 /* TEXT JUSTIFY */
