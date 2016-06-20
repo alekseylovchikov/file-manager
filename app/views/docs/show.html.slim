@@ -1,3 +1,11 @@
 .container
     h1.hero-heading= @doc.title
     p = @doc.content
+    
+    hr
+    
+    .file-info
+        p
+            small = 'Created at: ' + time_ago_in_words(@doc.created_at)
+        p
+            small = 'Updated at: ' + time_ago_in_words(@doc.updated_at)

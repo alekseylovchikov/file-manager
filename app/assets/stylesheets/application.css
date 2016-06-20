@@ -30,6 +30,12 @@ body {
     letter-spacing: 1px;
 }
 
+hr {
+    background-color: #ccc;
+    width: 80%;
+    margin: 40px 10% 40px 10%;
+}
+
 h1 {
     margin: 20px 0;
 }
@@ -93,6 +99,7 @@ a:hover {
 
 table {
     width: 100%;
+    font-size: 90%;
 }
 
 th, td {
@@ -104,6 +111,13 @@ tr:nth-child(even) {
     background-color: #f1f1f1;
 }
 
+/* FILE INFO */
+
+.file-info {
+    float: right;
+    text-align: right;
+}
+
 /* FORM */
 
 input:not([type="submit"]), textarea {
@@ -112,7 +126,6 @@ input:not([type="submit"]), textarea {
     
     width: 100%;
     padding: 8px 0 8px 0;
-    outline: none;
     border: 0;
     
     margin-bottom: 16px;
@@ -126,6 +139,7 @@ input:not([type="submit"]) {
 
 input:not([type="submit"]):focus {
     border-bottom: 2px solid #6cded2;
+    outline: none;
 }
 
 textarea {
@@ -144,7 +158,6 @@ input[type="submit"] {
     border: none;
     transition: background-color .5s, color .5s;
     cursor: pointer;
-    outline: none;
 }
 
 input[type="submit"]:hover {
@@ -152,14 +165,25 @@ input[type="submit"]:hover {
     background-color: #6cded2;
 }
 
+.error {
+    background-color: red;
+    color: #fff;
+    padding: 8px;
+}
+
 /* BUTTONS */
 
 .edit-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
     color: #fff;
     background-color: #7188ca;
     padding: 8px;
     text-decoration: none;
     transition: color .5s, background-color .5s;
+    
+    border-radius: 4px;
 }
 
 .edit-btn:hover {
@@ -168,11 +192,16 @@ input[type="submit"]:hover {
 }
 
 .delete-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
     color: #fff;
     background-color: #dc5959;
     padding: 8px;
     text-decoration: none;
     transition: color .5s, background-color .5s;
+    
+    border-radius: 4px;
 }
 
 .delete-btn:hover {
@@ -188,6 +217,8 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     box-shadow: 0 6px 14px 0 #bbb;
     transition: background-color .5s, box-shadow .5s;
+    
+    border-radius: 4px;
 }
 
 .add-btn:hover {
