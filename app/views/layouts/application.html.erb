@@ -2,20 +2,33 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Manager</title>
+  <title>FILEMANAGER</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   
+  <div class="left-panel">
+    <ul>
+      <li><%= link_to fa_icon("home") + ' HOME', root_path %></li>
+      <li><a href="#"><%= fa_icon("file") %> FILES</a></li>
+      <li><a href="#"><%= fa_icon("download") %> UPLOAD</a></li>
+      <li><a href="#"><%= fa_icon("file-archive-o") %> ARCHIVE</a></li>
+      <li><%= link_to fa_icon("envelope-o") + ' CONTACT', contacts_index_path %></li>
+    </ul>
+  </div>
+  
   <nav class="navbar">
     <div class="container">
       <ul class="left-nav">
         <li><a href="/"><%= image_tag("logo.png") %></a></li>
+        <li><a id="toggle-panel" href="#"><%= fa_icon("bars") %></a></li>
       </ul>
       
       <ul class="right-nav">
+        <li class=><%= link_to 'All Files', docs_path, class: params[:action] == 'index' && params[:controller] == 'docs' ? 'active' : '' %></li>
+        <li><%= link_to 'New File', new_doc_path, class: params[:action] == 'new' && params[:controller] == 'docs' ? 'active' : '' %></li>
         <li><%= link_to 'Sign Up', root_path %></li>
         <li><a href="#">Sign In</a></li>
       </ul>
@@ -23,6 +36,16 @@
   </nav>
   
   <%= yield %>
+  
+  <script>
+    $('#toggle-panel').click(function() {
+      if ($('.left-panel').css("left") == "0px") {
+        $('.left-panel').animate({ left: '-200px' }, 300, function() {});  
+      } else {
+        $('.left-panel').animate({ left: '0px' }, 300, function() {});  
+      }
+    });
+  </script>
 
 </body>
 </html>

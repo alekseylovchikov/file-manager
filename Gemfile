@@ -19,6 +19,8 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # template engine
 gem 'slim', '~> 3.0', '>= 3.0.7'
+# font awesome
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
