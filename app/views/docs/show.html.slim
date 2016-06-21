@@ -4,6 +4,10 @@
     
     hr
     
+    .show-page-actions
+        = link_to 'Edit', edit_doc_path(@doc), class: 'edit-btn'
+        = link_to 'Delete', doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-btn'
+    
     .file-info
         p
             small = 'Created at: ' + time_ago_in_words(@doc.created_at)

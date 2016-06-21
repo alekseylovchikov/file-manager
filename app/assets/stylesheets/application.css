@@ -32,8 +32,8 @@ body {
 
 hr {
     background-color: #ccc;
-    width: 80%;
-    margin: 40px 10% 40px 10%;
+    width: 100%;
+    margin: 20px 0;
 }
 
 h1 {
@@ -174,8 +174,6 @@ input[type="submit"]:hover {
 /* BUTTONS */
 
 .edit-btn {
-    display: inline-block;
-    width: 100%;
     text-align: center;
     color: #fff;
     background-color: #7188ca;
@@ -192,8 +190,6 @@ input[type="submit"]:hover {
 }
 
 .delete-btn {
-    display: inline-block;
-    width: 100%;
     text-align: center;
     color: #fff;
     background-color: #dc5959;
@@ -231,6 +227,10 @@ input[type="submit"]:hover {
 .actions {
     margin: 24px 0;
     text-align: center;
+}
+
+.show-page-actions {
+    float: left;
 }
 
 /* TEXT JUSTIFY */
