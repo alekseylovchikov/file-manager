@@ -96,6 +96,12 @@ a:hover {
     text-transform: uppercase;
 }
 
+/* MAIN TEXT */
+
+.main-text {
+    font-size: 84%;
+}
+
 /* TABLE */
 
 table {
@@ -457,5 +463,12 @@ a.active:after {
         width: calc(100%/4);
         text-align: center;
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    .container {
+        width: 100%;
+        margin: 0 2%;
     }
 }

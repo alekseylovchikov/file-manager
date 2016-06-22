@@ -1,10 +1,9 @@
 .container
     
-    - flash.each do |name, msg|
-        p.alert-msg = msg
+    = render 'layouts/messages'
 
     h1.hero-heading= @doc.title
-    p = @doc.content
+    p.main-text = @doc.content
     
     hr
     

@@ -18,9 +18,9 @@
 $(document).ready(function() {
     // animate alerts
     $('.alert-msg').animate({
-        opacity: 1,
+        opacity: .7,
         top: '0px',
-    }, 1000, function() {
+    }, 800, function() {
         //$(this).hide();
     }); 
     // remove alert
