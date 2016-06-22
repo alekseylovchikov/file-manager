@@ -1,4 +1,7 @@
 .container
+    - flash.each do |name, msg|
+        p.alert-msg = msg
+
     h1.hero-heading All files
 
     table
@@ -18,7 +21,7 @@
                     td = time_ago_in_words(doc.created_at)
                     td = time_ago_in_words(doc.updated_at)
                     td = link_to fa_icon('pencil'), edit_doc_path(doc), class: 'edit-btn'
-                    td = link_to fa_icon('trash'), '#', class: 'delete-btn'
+                    td = link_to fa_icon('trash'), doc_path(doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-btn'
                     
     .actions
         = link_to fa_icon('plus') + ' Add New File', new_doc_path, class: 'add-btn'

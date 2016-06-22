@@ -1,4 +1,8 @@
 .container
+    
+    - flash.each do |name, msg|
+        p.alert-msg = msg
+
     h1.hero-heading= @doc.title
     p = @doc.content
     

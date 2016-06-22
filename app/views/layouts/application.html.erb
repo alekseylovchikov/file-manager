@@ -36,16 +36,6 @@
   </nav>
   
   <%= yield %>
-  
-  <script>
-    $('#toggle-panel').click(function() {
-      if ($('.left-panel').css("left") == "0px") {
-        $('.left-panel').animate({ left: '-200px' }, 300, function() {});  
-      } else {
-        $('.left-panel').animate({ left: '0px' }, 300, function() {});  
-      }
-    });
-  </script>
 
 </body>
 </html>

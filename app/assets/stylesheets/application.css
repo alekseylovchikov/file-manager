@@ -60,6 +60,7 @@ h1 {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    position: relative;
 }
 
 a {
@@ -144,12 +145,14 @@ input:not([type="submit"]):focus {
 
 textarea {
     max-width: 100%;
+    min-height: 200px;
     border-bottom: 2px solid #e4e4e4;
     transition: border-bottom .5s;
 }
 
 textarea:focus {
     border-bottom: 2px solid #6cded2;
+    outline: 0;
 }
 
 input[type="submit"] {
@@ -179,14 +182,20 @@ input[type="submit"]:hover {
     background-color: #7188ca;
     padding: 8px;
     text-decoration: none;
-    transition: color .5s, background-color .5s;
+    transition: color .5s, background-color .5s, border .5s;
     
     border-radius: 4px;
+    
+    font-size: 70%;
+    
+    border: 2px solid transparent;
 }
 
 .edit-btn:hover {
     color: #7188ca;
     background-color: #fff;
+    
+    border: 2px solid #7188ca;
 }
 
 .delete-btn {
@@ -195,14 +204,20 @@ input[type="submit"]:hover {
     background-color: #dc5959;
     padding: 8px;
     text-decoration: none;
-    transition: color .5s, background-color .5s;
+    transition: color .5s, background-color .5s, border .5s;
     
     border-radius: 4px;
+    
+    font-size: 70%;
+    
+    border: 2px solid transparent;
 }
 
 .delete-btn:hover {
     color: #dc5959;
     background-color: #fff;
+    
+    border: 2px solid #dc5959;
 }
 
 .add-btn {
@@ -212,14 +227,34 @@ input[type="submit"]:hover {
     padding: 8px;
     text-transform: uppercase;
     box-shadow: 0 6px 14px 0 #bbb;
-    transition: background-color .5s, box-shadow .5s;
+    transition: background-color .5s, box-shadow .5s, border .5s;
     
     border-radius: 4px;
+    
+    font-size: 70%;
+    
+    border: 2px solid transparent;
 }
 
 .add-btn:hover {
     background-color: #5ae05a;
     box-shadow: 0 14px 14px 0 #bbb;
+    
+    border: 2px solid #5ae05a;
+}
+
+/* ALERT MESSAGE */
+
+.alert-msg {
+    position: absolute;
+    padding: 16px;
+    background-color: #fffbcc;
+    margin: 8px 0;
+    top: -200px;
+    opacity: 0;
+    right: 0;
+    
+    cursor: pointer;
 }
 
 /* ACTIONS */

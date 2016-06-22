@@ -17,6 +17,7 @@ class DocsController < ApplicationController
         @doc = Doc.new(doc_params)
         
         if @doc.save
+            flash[:success] = 'File succesfully created'
             redirect_to @doc
         else
             render 'new'
@@ -28,6 +29,7 @@ class DocsController < ApplicationController
     
     def update
         if @doc.update(doc_params)
+            flash[:success] = 'File succesfully updated'
             redirect_to @doc
         else
             render 'edit'
@@ -36,6 +38,7 @@ class DocsController < ApplicationController
     
     def destroy
         @doc.destroy
+        flash[:success] = 'File deleted succesfully'
         redirect_to docs_path
     end
     
