@@ -38,8 +38,10 @@ class DocsController < ApplicationController
     
     def destroy
         @doc.destroy
-        flash[:success] = 'File deleted succesfully'
-        redirect_to docs_path
+        if @doc.destroy
+            flash[:success] = 'File deleted succesfully'
+            redirect_to docs_path
+        end
     end
     
     private

@@ -17,29 +17,19 @@
 
 $(document).ready(function() {
     // animate alerts
-    $('.alert-msg').animate({
-        opacity: .7,
-        top: '0px',
-    }, 800, function() {
-        //$(this).hide();
-    }); 
-    // remove alert
-    $('.alert-msg').click(function() {
-        $(this).animate({
-            opacity: 0,
-            top: '-200px',
-        }, 500, function() {
-            $(this).hide();
-        });
+    $('.inside').animate({
+        opacity: 0,
+    }, 2400, function() {
+        $(this).hide();
     });
     
     // panel left controll
-    $('#toggle-panel').click(function() {
-        if ($('.left-panel').css("left") == "0px") {
-            $('.left-panel').animate({ left: '-200px' }, 300, function() {});  
-        } else {
-            $('.left-panel').animate({ left: '0px' }, 300, function() {});  
-        }
-    });
+    // $('#toggle-panel').click(function() {
+    //     if ($('.left-panel').css("left") == "0px") {
+    //         $('.left-panel').animate({ left: '-200px' }, 300, function() {});  
+    //     } else {
+    //         $('.left-panel').animate({ left: '0px' }, 300, function() {});  
+    //     }
+    // });
     
 });
