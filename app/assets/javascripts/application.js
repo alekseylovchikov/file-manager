@@ -23,13 +23,10 @@ $(document).ready(function() {
         $(this).hide();
     });
     
-    // panel left controll
-    // $('#toggle-panel').click(function() {
-    //     if ($('.left-panel').css("left") == "0px") {
-    //         $('.left-panel').animate({ left: '-200px' }, 300, function() {});  
-    //     } else {
-    //         $('.left-panel').animate({ left: '0px' }, 300, function() {});  
-    //     }
-    // });
+    var errors = $('.error');
+    
+    errors.each(function(i, error) {
+        error.animate([{opacity: getComputedStyle(error).opacity}, {opacity: 1}], 2400);    
+    });
     
 });

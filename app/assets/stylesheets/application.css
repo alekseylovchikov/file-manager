@@ -126,6 +126,10 @@ tr:nth-child(even) {
 
 /* FORM */
 
+.new_doc {
+    position: relative;    
+}
+
 input:not([type="submit"]), textarea {
     font-family: "Open Sans", "Ubuntu", "Arial", sans-serif;
     font-size: 80%;
@@ -160,26 +164,47 @@ textarea:focus {
     outline: 0;
 }
 
-input[type="submit"] {
-    padding: 8px;
-    text-transform: uppercase;
-    border: none;
-    transition: background-color .5s, color .5s;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    color: #fff;
-    background-color: #6cded2;
-}
-
 .error {
-    background-color: red;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ff6262;
     color: #fff;
     padding: 8px;
+}
+
+/* ALERTS DEVISE */
+
+.notice, .alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* BUTTONS */
+
+.btn {
+    border: 2px solid transparent;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    border-radius: 8px;
+}
+
+.btn-default {
+    background-color: #ccc;
+    transition: background-color .5s, color .5s, border .5s;
+}
+
+.btn-default:hover {
+    background-color: #fff;
+    color: #ccc;
+    border: 2px solid #ccc;
+}
 
 .edit-btn {
     text-align: center;
@@ -248,6 +273,28 @@ input[type="submit"]:hover {
     border: 2px solid #5ae05a;
 }
 
+input[type="submit"] {
+    border-radius: 4px;
+    background-color: #2b83b7;
+    color: #fff;
+    padding: 8px;
+    text-transform: uppercase;
+    transition: background-color .5s, color .5s, border .5s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #2b83b7;
+    
+    border: 2px solid #2b83b7;
+}
+
+input[type="submit"]:focus {
+    outline: 0;
+}
+ 
 /* ALERT MESSAGE */
 
 .inside {

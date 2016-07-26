@@ -29,11 +29,14 @@
       <ul class="right-nav">
         <li class=><%= link_to 'All Files', docs_path, class: params[:action] == 'index' && params[:controller] == 'docs' ? 'active' : '' %></li>
         <li><%= link_to 'New File', new_doc_path, class: params[:action] == 'new' && params[:controller] == 'docs' ? 'active' : '' %></li>
-        <li><%= link_to 'Sign Up', root_path %></li>
-        <li><a href="#">Sign In</a></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
       </ul>
     </div>
   </nav>
+  
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   
   <%= yield %>
 
