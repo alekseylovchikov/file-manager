@@ -21,6 +21,7 @@
                     td = time_ago_in_words(doc.updated_at)
                     td = link_to 'Edit', edit_doc_path(doc), class: 'edit-btn'
                     td = link_to 'Delete', doc_path(doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-btn'
-                    
-    .actions
-        = link_to fa_icon('plus') + ' Add New File', new_doc_path, class: 'add-btn'
+            
+    - if current_user        
+        .actions
+            = link_to fa_icon('plus') + ' Add New File', new_doc_path, class: 'add-btn'

@@ -13,7 +13,11 @@ class DocsController < ApplicationController
     end
     
     def new
-        @doc = current_user.docs.build
+        if current_user
+            @doc = current_user.docs.build
+        else
+            redirect_to root_path
+        end
     end
     
     def create
